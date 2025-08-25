@@ -1,5 +1,5 @@
 ```
-git clone https://github.com/hack0181810-hash/DN-VPS.git
+git clone https://github.com/hiteshwy/DN-VPS.git
 ```
 ```
 cd DN-VPS
