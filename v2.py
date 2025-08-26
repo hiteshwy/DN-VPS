@@ -327,7 +327,7 @@ async def change_status():
         else:
             instance_count = 0
 
-        status = f" LP NODES {instance_count} VPS"
+        status = f" DarkNodes {instance_count} VPS"
         await bot.change_presence(activity=discord.Game(name=status))
     except Exception as e:
         print(f"Failed to update status: {e}")
@@ -430,7 +430,7 @@ async def node_stats(interaction: discord.Interaction):
     
     embed = discord.Embed(
         title="📊 Panel Node Dashboard",
-        description="📡 lp nodes",
+        description="📡 DarkNodes",
         color=0x2400ff
     )
     
@@ -972,7 +972,7 @@ async def deploy_with_os(interaction, os_type, ram, cpu, user_id, user, containe
         dm_embed.add_field(name="🔥 CPU Cores", value=f"{cpu} cores", inline=True)
         dm_embed.add_field(name="🧊 Container Name", value=container_name, inline=False)
         dm_embed.add_field(name="💾 Storage", value=f"10000 GB (Shared storage)", inline=True)
-        dm_embed.add_field(name="🔒 Password", value="lpnodes", inline=False)
+        dm_embed.add_field(name="🔒 Password", value="DarkNodes", inline=False)
         
         dm_embed.set_footer(text="Keep this information safe and private!")
         
@@ -1233,7 +1233,7 @@ async def sendvps(
     if interaction.user.id not in ADMIN_IDS:
         embed = discord.Embed(
             title="❌ Access Denied",
-            description="Only Mrsdbd admins can use this command.",
+            description="Only DarkNodes admins can use this command.",
             color=0xff0000
         )
         await interaction.response.send_message(embed=embed, ephemeral=True)
@@ -1251,7 +1251,7 @@ async def sendvps(
     embed.add_field(name="🧬 Full Combo", value=f"```{fullcombo}```", inline=False)
     embed.add_field(name="💾 RAM", value=f"{ram} GB", inline=True)
     embed.add_field(name="🔥 CPU", value=f"{cpu} cores", inline=True)
-    embed.set_footer(text="🔐 Safe your details | Powered by LP NODES")
+    embed.set_footer(text="🔐 Safe your details | Powered by DarkNodes")
 
     try:
         await user.send(embed=embed)
